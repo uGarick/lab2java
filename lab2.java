@@ -20,9 +20,9 @@ public class lab2 {
 
     public static double computeArea(Point3d a, Point3d b, Point3d c) {
         if (equalPoints(a, b, c)) {return -1;}
-        double sideA = a.distanceTo(b.getX(), b.getY(),b.getZ());
-        double sideB = b.distanceTo(c.getX(), c.getY(), c.getZ());
-        double sideC = a.distanceTo(c.getX(), c.getY(), c.getZ());
+        double sideA = a.distanceTo(b.coords.getX(), b.coords.getY(),b.getZ());
+        double sideB = b.distanceTo(c.coords.getX(), c.coords.getY(), c.getZ());
+        double sideC = a.distanceTo(c.coords.getX(), c.coords.getY(), c.getZ());
         double p = (sideA + sideB + sideC)/2;
         p = (Math.ceil(p*100))/100;
         double square = Math.sqrt(p*(p-sideA)*(p-sideB)*(p-sideC));
